@@ -16,8 +16,6 @@ body a {
     -ms-transition: 0.5s all;
 }
 
-
-
 a:hover {
     text-decoration: none;
 }
@@ -385,7 +383,7 @@ li > a:only-child:after {
 /*--/banner --*/
 
 .main-banner {
-    background: url(../single-post-pic.jpg)no-repeat center;
+    background: url(../images/banner.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -396,7 +394,7 @@ li > a:only-child:after {
 }
 
 .main-banner.inner {
-    background: url(../single-post-pic.jpg)no-repeat center;
+    background: url(../images/banner.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -405,6 +403,13 @@ li > a:only-child:after {
     position: relative;
     min-height: 20em;
 }
+
+.bg1 {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    background-image: url("../single-post-pic.jpg");
+}
+
 
 /*-- place holder --*/
 
