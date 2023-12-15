@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'movies',
     'ckeditor',
     'ckeditor_uploader',
+    'snowpenguin.django.recaptcha3',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+RECAPTCHA_PUBLIC_KEY = '6LdVizIpAAAAAFr9qb44h3hKjf7c55192YhsUjLo'
+RECAPTCHA_PRIVATE_KEY = '6LdVizIpAAAAAO8ztf_pcAr956QhNIcX31v0qo1G'
+RECAPTCHA_DEFAULT_ACTION = 'generic'
+RECAPTCHA_SCORE_THRESHOLD = 0.5
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
