@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-
+from modeltranslation.admin import TranslationAdmin
 from .models import *
 from django.utils.safestring import mark_safe
 
@@ -8,7 +8,9 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
 class MovieAdminForm(forms.ModelForm):
-    description = forms.CharField(label= "Описание", widget=CKEditorUploadingWidget())
+    description_ru = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    description_en = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    description_uz = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
 
     class Meta:
         model = Movie
@@ -16,8 +18,8 @@ class MovieAdminForm(forms.ModelForm):
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'url')
+class CategoryAdmin(TranslationAdmin):
+    list_display = ('name', 'url')
     list_display_links = ('name',)
 
 
@@ -133,7 +135,7 @@ class RatingAdmin(admin.ModelAdmin):
 
 
 @admin.register(MovieShort)
-class MovieShotsAdmin(admin.ModelAdmin):
+class MovieShotsAdmin(TranslationAdmin):
     """Кадры из фильма"""
     list_display = ("title", "movie", "get_image")
     readonly_fields = ("get_image",)
