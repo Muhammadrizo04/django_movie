@@ -1,1 +1,7 @@
-*.html linguist-vendored
+*.py linguist-dominant-language=Python
+*.js linguist-vendored
+*.css linguist-vendored
+/templates/* linguist-vendored
+/static/* linguist-vendored
+/migrations/* linguist-vendored
+/frontend/* linguist-vendored
